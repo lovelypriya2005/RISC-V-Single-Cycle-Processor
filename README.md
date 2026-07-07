@@ -88,3 +88,44 @@ RISC-V-Single-Cycle-Processor
 - **waveforms/** – Simulation waveform screenshots captured from ModelSim.
 - **images/** – Block diagrams, datapath figures, and architecture illustrations.
 - **docs/** – Project report and supporting documentation.
+
+---
+
+# 📖 Supported RV32I Instructions
+
+The current implementation supports a subset of the **RISC-V RV32I Instruction Set Architecture**, covering arithmetic, logical, memory access, branch, and jump operations.
+
+| Category | Instructions |
+|----------|--------------|
+| Arithmetic | `ADD`, `SUB`, `ADDI` |
+| Logical | `AND`, `OR`, `XOR`, `ANDI`, `ORI`, `XORI` |
+| Shift | `SLL`, `SRL`, `SRA`, `SLLI`, `SRLI`, `SRAI` |
+| Comparison | `SLT`, `SLTU`, `SLTI`, `SLTIU` |
+| Load | `LW` |
+| Store | `SW` |
+| Branch | `BEQ` |
+| Jump | `JAL` |
+
+---
+
+# 🧩 Implemented RTL Modules
+
+The processor is designed using a modular RTL approach. Each hardware component is implemented as an independent Verilog module.
+
+| Module | Description |
+|---------|-------------|
+| `pc.v` | Program Counter |
+| `instruction_memory.v` | Instruction Memory |
+| `regfile.v` | 32 × 32-bit Register File |
+| `immediate_generator.v` | Immediate Generator |
+| `control_unit.v` | Main Control Unit |
+| `alu_control.v` | ALU Control Unit |
+| `alu.v` | Arithmetic Logic Unit |
+| `alu_src_mux.v` | ALU Source Multiplexer |
+| `datamem.v` | Data Memory |
+| `branchjumpadder.v` | Branch & Jump Address Generator |
+| `pcselectmux.v` | PC Selection Multiplexer |
+| `writebackmux.v` | Writeback Multiplexer |
+| `riscv_top.v` | Top-level Processor Integration |
+
+---
