@@ -1,6 +1,16 @@
+<div align="center">
+
 # 🚀 32-bit Single-Cycle RISC-V Processor
 
-> A 32-bit Single-Cycle RISC-V Processor designed in **Verilog HDL**, verified using **ModelSim**, and implementing a subset of the **RISC-V RV32I Instruction Set Architecture (ISA)**.
+![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
+![ISA](https://img.shields.io/badge/ISA-RV32I-green)
+![Simulation](https://img.shields.io/badge/Simulation-ModelSim-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+**A 32-bit Single-Cycle RISC-V Processor designed in Verilog HDL, verified using ModelSim, and implementing a subset of the RISC-V RV32I Instruction Set Architecture.**
+
+</div>
 
 ---
 
