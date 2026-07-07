@@ -274,12 +274,13 @@ The processor was verified using a comprehensive RISC-V test program covering ar
 ## Final Verification Waveform
 
 <p align="center">
-  <img src="final_processor.png" width="950"/>
+  <img src="final_processor.png" width="850"/>
 </p>
 
 <p align="center">
 <b>Figure.</b> Functional verification of the complete 32-bit Single-Cycle RISC-V Processor in ModelSim using a comprehensive instruction test program.
 </p>
+
 
 ## Verification Methodology
 
