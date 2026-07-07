@@ -224,6 +224,63 @@ The complete processor was functionally verified using **ModelSim**. Each RTL mo
 
 After integration, a custom RISC-V test program was executed to verify the correct operation of the datapath and control logic.
 
+# 🧪 Final Processor Verification
+
+The processor was verified using a comprehensive RISC-V test program covering arithmetic, logical, memory, branch, and jump instructions. The program was assembled into machine code and loaded into the instruction memory for simulation in ModelSim.
+
+## Test Program (Machine Code)
+
+```text
+00500093
+00A00113
+002081B3
+40118233
+0021F2B3
+0020E333
+0020C3B3
+00302023
+00002403
+00184663
+06300493
+0080056F
+04D00593
+0020E613
+00667693
+00000063
+```
+
+### Instructions Executed
+
+| Machine Code | Instruction |
+|--------------|-------------|
+| 00500093 | `addi x1, x0, 5` |
+| 00A00113 | `addi x2, x0, 10` |
+| 002081B3 | `add x3, x1, x2` |
+| 40118233 | `sub x4, x3, x1` |
+| 0021F2B3 | `and x5, x3, x2` |
+| 0020E333 | `or x6, x1, x2` |
+| 0020C3B3 | `xor x7, x1, x2` |
+| 00302023 | `sw x3, 0(x0)` |
+| 00002403 | `lw x8, 0(x0)` |
+| 00184663 | `beq x3, x8, label` |
+| 06300493 | `addi x9, x0, 99` *(skipped when branch is taken)* |
+| 0080056F | `jal x10, done` |
+| 04D00593 | `addi x11, x0, 77` *(skipped after jump)* |
+| 0020E613 | `ori x12, x1, 2` |
+| 00667693 | `andi x13, x12, 6` |
+| 00000063 | `beq x0, x0, end` |
+
+
+## Final Verification Waveform
+
+<p align="center">
+  <img src="final_processor.png" width="950"/>
+</p>
+
+<p align="center">
+<b>Figure.</b> Functional verification of the complete 32-bit Single-Cycle RISC-V Processor in ModelSim using a comprehensive instruction test program.
+</p>
+
 ## Verification Methodology
 
 The following verification steps were performed:
