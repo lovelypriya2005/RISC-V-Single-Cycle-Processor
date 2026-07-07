@@ -289,3 +289,25 @@ The current processor implements a subset of the RV32I instruction set. Future e
 - Design and implement a 5-stage pipelined RISC-V processor.
 - Implement FPGA-based hardware validation.
 - Extend the design towards the complete RTL-to-GDSII flow.
+
+# 👩‍💻 Author
+
+**P. Lovely Priya**
+
+B.Tech in Electronics and Communication Engineering
+
+Project Focus:
+- Digital Design
+- Verilog HDL
+- RISC-V Processor Design
+- VLSI Design
+- RTL-to-GDSII Flow
+
+GitHub: https://github.com/lovelypriya2005
+
+---
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the LICENSE file for details.
