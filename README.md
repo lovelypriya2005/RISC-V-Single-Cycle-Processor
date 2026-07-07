@@ -188,3 +188,59 @@ Memory Access   Branch/Jump
 10. The **PC Select Multiplexer** chooses the next instruction address (PC + 4 or Branch/Jump Target).
 
 ---
+
+---
+
+# 🧪 Simulation & Verification
+
+The complete processor was functionally verified using **ModelSim**. Each RTL module was first tested individually using dedicated testbenches before integrating the complete processor.
+
+After integration, a custom RISC-V test program was executed to verify the correct operation of the datapath and control logic.
+
+## Verification Methodology
+
+The following verification steps were performed:
+
+- ✔ Individual module verification
+- ✔ Top-level processor simulation
+- ✔ Instruction-by-instruction execution
+- ✔ Register file verification
+- ✔ Data memory read/write verification
+- ✔ ALU operation verification
+- ✔ Branch decision verification
+- ✔ Jump instruction verification
+- ✔ Writeback verification
+
+The waveform analysis confirmed that all supported instructions were executed correctly and the expected results were written back to the destination registers.
+
+---
+
+# 📈 Results
+
+The processor successfully executed a custom RISC-V test program covering arithmetic, logical, memory, branch, and jump instructions.
+
+### Successfully Verified
+
+- Arithmetic Operations
+- Logical Operations
+- Immediate Instructions
+- Register File Read/Write
+- Memory Read (LW)
+- Memory Write (SW)
+- Branch (BEQ)
+- Jump (JAL)
+- Writeback Logic
+- Complete Datapath Integration
+
+The ModelSim simulation confirms the correct generation of control signals, ALU operations, memory access, and register writeback for all supported instructions.
+
+---
+
+# 🔮 Future Improvements
+
+The current processor implements a subset of the RV32I instruction set. Future enhancements include:
+
+- Complete support for the full RV32I instruction set.
+- Design and implement a 5-stage pipelined RISC-V processor.
+- Implement FPGA-based hardware validation.
+- Extend the design towards the complete RTL-to-GDSII flow.
