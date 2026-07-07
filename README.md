@@ -82,9 +82,12 @@ The design is divided into multiple RTL modules, each responsible for a specific
 The proposed processor follows a **32-bit Single-Cycle RISC-V (RV32I)** architecture. It is designed using a modular datapath that performs instruction fetch, decode, execution, memory access, and write-back within a single clock cycle.
 
 <p align="center">
-  <img src="images/riscv_architecture.png" alt="RISC-V Single-Cycle Processor Architecture" width="700"/>
+  <img src="waveforms/final_verification.png" width="900"/>
 </p>
 
+<p align="center">
+<b>Figure 2.</b> Final Processor Verification in ModelSim
+</p>
 The architecture consists of interconnected modules including the **Program Counter (PC), Instruction Memory, Register File, Control Unit, Immediate Generator, ALU Source Multiplexer, Arithmetic Logic Unit (ALU), Data Memory, Branch Address Generator, and Writeback Multiplexer**. These modules work together to execute RISC-V instructions efficiently while maintaining a simple and modular hardware design.
 
 ---
