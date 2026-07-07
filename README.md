@@ -15,3 +15,25 @@ The processor executes one instruction per clock cycle and supports a subset of 
 The complete design has been functionally verified through simulation using **ModelSim**, with dedicated testbenches and custom RISC-V assembly programs converted into machine code for execution.
 
 This project was developed as part of an RTL-to-GDSII learning journey to gain a strong understanding of processor architecture, digital design, computer organization, and Verilog-based hardware implementation.
+
+---
+
+## ✨ Features
+
+- ✅ 32-bit Single-Cycle RISC-V Processor
+- ✅ Implements a subset of the **RV32I Instruction Set Architecture**
+- ✅ Designed completely in **Verilog HDL**
+- ✅ Modular RTL design for easy understanding and scalability
+- ✅ Executes one instruction per clock cycle
+- ✅ Supports arithmetic and logical operations
+- ✅ Supports immediate instructions
+- ✅ Supports load and store memory operations
+- ✅ Supports conditional branch instructions
+- ✅ Supports unconditional jump instructions
+- ✅ Dedicated ALU Control Unit for instruction decoding
+- ✅ 32 × 32-bit Register File
+- ✅ Immediate Generator supporting multiple instruction formats
+- ✅ Separate Instruction Memory and Data Memory
+- ✅ Write-back architecture using a dedicated multiplexer
+- ✅ Functional verification performed using **ModelSim**
+- ✅ Tested using custom RISC-V assembly programs
