@@ -37,3 +37,28 @@ This project was developed as part of an RTL-to-GDSII learning journey to gain a
 - ✅ Write-back architecture using a dedicated multiplexer
 - ✅ Functional verification performed using **ModelSim**
 - ✅ Tested using custom RISC-V assembly programs
+
+---
+
+# 🏗️ Processor Architecture
+
+The processor follows a **Single-Cycle RISC-V Datapath**, where every instruction is fetched, decoded, executed, and completed within a single clock cycle.
+
+The design is divided into multiple RTL modules, each responsible for a specific function in the datapath. These modules are interconnected to perform instruction execution according to the RISC-V RV32I specification.
+
+## Major Hardware Modules
+
+| Module | Function |
+|---------|----------|
+| Program Counter (PC) | Stores the address of the current instruction |
+| Instruction Memory | Fetches instructions using the Program Counter |
+| Register File | Stores 32 general-purpose registers and provides source operands |
+| Immediate Generator | Generates sign-extended immediate values for different instruction formats |
+| Main Control Unit | Generates control signals based on the instruction opcode |
+| ALU Control Unit | Decodes instruction fields and selects the ALU operation |
+| ALU | Performs arithmetic and logical operations |
+| Data Memory | Executes load and store operations |
+| Branch & Jump Adder | Computes branch and jump target addresses |
+| PC Select MUX | Chooses the next Program Counter value |
+| ALU Source MUX | Selects between register data and immediate value |
+| Writeback MUX | Selects the value written back to the Register File |
