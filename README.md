@@ -214,6 +214,24 @@ The following verification steps were performed:
 The waveform analysis confirmed that all supported instructions were executed correctly and the expected results were written back to the destination registers.
 
 ---
+# ✅ Verification Summary
+
+The processor was verified using:
+
+- Individual module testbenches
+- Integrated processor simulation
+- Custom RISC-V assembly programs
+- ModelSim waveform analysis
+
+Verified functionality includes:
+
+- Arithmetic instructions
+- Logical instructions
+- Immediate instructions
+- Load/Store operations
+- Branch instructions
+- Jump instructions
+- Register write-back
 
 # 📈 Results
 
