@@ -274,7 +274,7 @@ The processor was verified using a comprehensive RISC-V test program covering ar
 ## Final Verification Waveform
 
 <p align="center">
-  <img src="final_processor.png" width="850"/>
+  <img src="waveforms/processor/final_processor.png" width="850"/>
 </p>
 
 <p align="center">
