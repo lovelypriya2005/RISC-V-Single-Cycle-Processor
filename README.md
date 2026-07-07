@@ -62,3 +62,29 @@ The design is divided into multiple RTL modules, each responsible for a specific
 | PC Select MUX | Chooses the next Program Counter value |
 | ALU Source MUX | Selects between register data and immediate value |
 | Writeback MUX | Selects the value written back to the Register File |
+
+---
+
+# 📂 Project Structure
+
+```text
+RISC-V-Single-Cycle-Processor
+│
+├── rtl/                  # Verilog RTL source files
+├── testbench/            # Testbenches for simulation
+├── program/              # RISC-V assembly programs and machine code
+├── waveforms/            # ModelSim waveform screenshots
+├── images/               # Architecture and datapath diagrams
+├── docs/                 # Project documentation and report
+├── LICENSE
+└── README.md
+```
+
+## Directory Description
+
+- **rtl/** – Contains all Verilog HDL modules implementing the processor.
+- **testbench/** – Simulation testbenches used to verify the RTL.
+- **program/** – Assembly programs, generated machine code, and memory initialization files.
+- **waveforms/** – Simulation waveform screenshots captured from ModelSim.
+- **images/** – Block diagrams, datapath figures, and architecture illustrations.
+- **docs/** – Project report and supporting documentation.
