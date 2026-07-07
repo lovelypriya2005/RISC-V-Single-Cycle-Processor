@@ -129,3 +129,62 @@ The processor is designed using a modular RTL approach. Each hardware component 
 | `riscv_top.v` | Top-level Processor Integration |
 
 ---
+
+---
+
+# 🔄 Processor Execution Flow
+
+Each instruction passes through the following stages during execution:
+
+```text
+        Reset
+          │
+          ▼
+ Program Counter (PC)
+          │
+          ▼
+ Instruction Fetch
+          │
+          ▼
+ Instruction Decode
+          │
+          ▼
+ Read Register Operands
+          │
+          ▼
+ Generate Immediate
+          │
+          ▼
+ ALU Operation
+          │
+          ▼
+  ┌───────────────┐
+  │               │
+  ▼               ▼
+Memory Access   Branch/Jump
+  │               │
+  └──────┬────────┘
+         ▼
+ Writeback MUX
+         │
+         ▼
+ Register File
+         │
+         ▼
+ Next Program Counter
+```
+
+### Instruction Execution Sequence
+
+1. The **Program Counter (PC)** stores the address of the current instruction.
+2. The **Instruction Memory** fetches the instruction.
+3. The **Control Unit** decodes the opcode and generates control signals.
+4. The **Register File** provides the required source operands.
+5. The **Immediate Generator** creates the required immediate value.
+6. The **ALU Control Unit** selects the appropriate ALU operation.
+7. The **ALU** performs arithmetic or logical operations.
+8. **Data Memory** performs load/store operations when required.
+9. The **Writeback Multiplexer** selects the value to write into the destination register.
+10. The **PC Select Multiplexer** chooses the next instruction address (PC + 4 or Branch/Jump Target).
+
+---
